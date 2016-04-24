@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.turbolinks
+//= require mediaelement_rails
 //= require main
+//= require plugins
+//= require modernizr-2.8.3.min
 //= require_tree .

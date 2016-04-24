@@ -20,6 +20,8 @@ gem 'stripe', '~> 1.15.0'
 gem 'pickadate-rails'
 gem 'jquery-turbolinks'
 
+gem "mediaelement_rails"
+
 group :development, :test do
 	gem 'sqlite3'
   gem 'byebug'
