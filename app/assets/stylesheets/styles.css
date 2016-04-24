@@ -1,0 +1,1337 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	color: 333;
+	letter-spacing: 0.03rem;
+	-webkit-font-smoothing: antialased;
+	background: #F2EBC7;
+	font-family: 'Lora', serif;
+	outline: none;
+	color: #333;
+	transition-duration: 0.5s;
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.service-times-container,
+.container {
+	margin: 0 auto;
+	padding: 0 1.8rem;
+}
+
+.container {
+	max-width: 960px;
+}
+
+.service-times-container {
+	max-width: 1200px;
+}
+
+/* 
+
+H1  24pt    2em     32px        32px        32px    32px       
+H2  18pt    1.5em   24px        24px        24px    24px
+H3  13.55pt 1.17em  18.7333px   18.7167px   18px    19px
+H4  n/a     n/a     n/a         n/a         n/a     n/a
+H5  10pt    0.83em  13.2667px   13.2833px   13px    13px
+H6  7.55pt  0.67em  10.7333px   10.7167px   10px    11px 
+
+*/
+
+/**************************************
+				     Typography
+***************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
+	text-align: center;
+	margin: 1rem 0;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+p,
+address.give-page span,
+.location address span {
+	font-size: 1.2rem;
+}
+
+.events-hero-img h1,
+.blog-hero-img h1,
+.sermon-hero-img h1,
+.hero-img h1,
+.contact-hero-img h1,
+.give-hero-img h1,
+.history-hero-img h1,
+.pastor-hero-img h1 {
+	font-size: 3rem;
+	color: #fefefe;
+	margin: 0;
+	padding-top: 6rem;
+	text-align: center;
+	text-shadow: 2px 1px 5px black; 
+}
+
+.firstcharacter { 
+	float: left; 
+	color: #903; 
+	font-size: 75px; 
+	line-height: 60px; 
+	padding-top: 4px; 
+	padding-right: 8px; 
+	padding-left: 3px; 
+	font-family: Georgia; 
+}
+
+/**************************************
+				     General
+***************************************/
+
+nav a {
+	color: #fff;
+}
+
+a {
+	color: #82C4B1;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+li {
+	list-style-type: none;
+}
+
+input,
+textarea {
+	width: 100%;
+	margin: 0.2em 0;
+	padding: 1rem;
+	border: 1px solid #d7daab;
+	background: #d7daab;
+}
+
+input[type="submit"] {
+	padding: 1rem;
+	text-transform: uppercase;
+}
+
+section.intro-text,
+section.times-location,
+section.upcoming-events,
+section.prayer-requests,
+section.latest-sermons,
+section.blog,
+section.support-our-church,
+section.give,
+section.sermons,
+section.contact,
+section.history,
+section.pastor,
+footer {
+	padding: 2rem 0;
+}
+
+section.upcoming-events.page {
+	background: #F2EBC7;
+}
+
+i.fa {
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.underline-text {
+	text-decoration: underline;
+}
+
+/**************************************
+				     Navigation
+***************************************/
+
+header {
+	height: 70px;
+	line-height: 70px;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+}
+
+.active {
+	background: #000;
+	transition-duration: 0.5s;
+}
+
+a#logo {
+	color: #fff;
+	margin: 0;
+	font-size: 1.8rem;
+	text-align: left;
+	display: inline-block;
+	float: left;
+	text-shadow: 2px 1px 5px black; 
+}
+
+i.fa {
+	font-size: 2rem;
+}
+
+i.fa.fa-bars {
+	color: #fff;
+	float: right;
+	display: inline-block;
+	margin-top: 1.2rem;
+	cursor: pointer;
+	text-shadow: 2px 1px 5px black; 
+}
+
+.header {
+	padding: 0 1rem;
+}
+
+nav {
+	display: none;
+}
+
+nav {
+	background: #000;
+	padding: 0 1rem;
+}
+
+ul.nav li a {
+	display: block;
+	font-size: 1.2rem;
+	padding: 0.5rem 0;
+	text-shadow: 2px 1px 5px black; 
+}
+
+nav,
+.dropdown-content {
+	display: none;
+}
+
+ul.dropdown-content {
+	margin-left: 2rem;
+}
+
+/**************************************
+				     Hero Images
+***************************************/
+
+.video-header{
+	display: none;
+}
+
+section.hero-img {
+	background: url("ocean-1.jpeg") no-repeat, radial-gradient(#6de590, #e67478);
+	background-blend-mode: multiply;
+	-webkit-background: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 38rem;
+	width: auto;
+}
+
+section.sermon-hero-img {
+	background: url("sermons-bible-img.jpeg") no-repeat;
+	background-position: center bottom;
+}
+
+section.blog-hero-img {
+	background: url("blog-pages-img.jpeg") no-repeat;
+}
+
+section.events-hero-img {
+	background: url("events-hero-img.jpeg") no-repeat;
+
+}
+
+section.give-hero-img {
+	background: url("food-1.jpeg") no-repeat;
+	background-position: center bottom;
+}
+
+section.contact-hero-img {
+	background: url("cross-1.jpg") no-repeat center center;
+}
+
+section.pastor-hero-img {
+	background: url("big-tree.jpeg") no-repeat, radial-gradient(#6de590, #e67478);
+	background-blend-mode: multiply;
+	background-position: center bottom;
+}
+
+section.history-hero-img {
+	background: url("ch4.jpg")no-repeat, radial-gradient(#6de590, #e67478);
+	background-blend-mode: multiply;
+	background-position: center bottom;
+}
+
+section.pastor-hero-img,
+section.history-hero-img,
+section.sermon-hero-img,
+section.blog-hero-img,
+section.events-hero-img,
+section.give-hero-img,
+section.contact-hero-img,
+section.history-hero-img {
+	-webkit-background: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 18rem;
+	width: auto;
+}
+
+
+
+/**************************************
+				   Intro Text
+***************************************/
+
+section.intro-text {
+	color: #fff;
+}
+
+section.intro-text {
+	background: #02100D;
+}
+
+section.intro-text p {
+	text-align: center;
+}
+
+section.intro-text p {
+	padding: 1rem 0; 
+}
+
+/**************************************
+				   Church Times
+***************************************/
+
+section.times-location {
+
+}
+
+section.times-location .location,
+section.times-location .times {
+	margin: 2rem 0;
+}
+
+.times-and-location-section {
+	overflow: hidden;
+}
+
+.times h2,
+.location h2 {
+	text-align: left;
+	font-size: 1.8rem;
+}
+
+.location address {
+	width: 20rem;
+	font-size: 1.4rem;
+}
+
+/**************************************
+				   Buttons
+***************************************/
+
+.btn {
+	margin: 2rem 0;
+	text-align: center;
+}
+
+
+.give-now-btn a,
+.learn-more-btn a,
+.learn-more-btn-give a,
+.read-more-btn a,
+.see-more-btn a,
+.hear-more-btn a,
+.visit-us-btn a,
+.get-directions-btn a {
+	color: #333;
+	display: inline-block;
+	padding: 0.5rem 1.7rem;
+	border: 3px solid #333;
+	text-transform: uppercase;
+	transition-duration: 0.5s;
+}
+
+.visit-us-btn a,
+.learn-more-btn a {
+	color: #fff;
+	border-color: #fff;
+}
+
+.visit-us-btn a:hover {
+	background: #FFD34E;
+	color: #333;
+	background: #FFD34E;
+	border: 3px solid #FFD34E;
+}
+
+/**************************************
+				   Map
+***************************************/
+
+#google-map {
+	height: 30rem;
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+#map {
+	height: 25rem;
+}
+
+/**************************************
+				   Upcoming Events
+***************************************/
+
+section.upcoming-events {
+	background: #FFD34E;
+}
+
+.event {
+	margin: 1.5rem 0;
+	padding: 2rem 0 3rem 0;
+	border-bottom: 1px dotted #333;
+}
+
+.event:last-child {
+	border: none;
+}
+
+h1.event-title,
+h1.sermon-title  {
+	text-align: left;
+	font-size: 1.6rem;
+	margin: 0 ;
+}
+
+.event-details {
+	float: right;
+	width: 60%;
+	margin-left: 10%;
+}
+
+.event-date {
+	margin-top: 0.3rem;
+	text-align: center;
+	float: left;
+	width: 30%;
+	font-weight: 900;
+	background: #DB9E36;
+	padding: 0.8rem 0;
+}
+
+.event-month {
+	font-size: 1.2rem;
+}
+
+.event-info {
+	display: none;
+}
+
+.event-day {
+	font-size: 2.4rem;
+	font-weight: 900;
+}
+
+.address {
+	font-size: 1.2rem;
+	padding: 0.5rem 0;
+	font-weight: bold;
+}
+
+.read-more,
+.details {
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	padding: 0.2rem 0rem;
+	display: inline-block;
+/* 	padding: 0.4rem 0.8rem; */
+	transition-duration: 0.2s;
+}
+
+.details:hover {
+	padding: 0.2rem 0.8rem;
+	color: #82C4B1;
+	background: #333;
+}
+
+.read-more:hover {
+	padding: 0.2rem 0.8rem;
+}
+
+.details {
+	color: #333;
+}
+
+i.fa.fa-long-arrow-right {
+	display: inline-block;
+	font-size: 0.8rem;
+	margin-left: 0.5rem;
+}
+/**************************************
+				 Prayer Request Form
+***************************************/
+
+section.prayer-requests {
+	background: #F2EBC7 url("../img/mountain-1.jpeg");
+	background-blend-mode: color-burn;
+	background-position: bottom center;
+}
+
+form {
+	margin: 1rem 0;
+	opacity: 0.8;
+}
+
+.prayer-requests p {
+	text-align: center;
+}
+
+/**************************************
+				 			Pastor
+***************************************/
+
+.pastor-img {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+ul.churches-served {
+	background: linear-gradient(#d7daab, #F2EBC7 96%);
+	padding: 1rem;
+	margin-left: 1%;
+}
+
+ul.churches-served li {
+	padding: 0 1rem;
+}
+
+div.rev-section {
+	margin-bottom: 2rem;
+}
+
+section.pastor p {
+	padding: 1rem 0;
+}
+
+/**************************************
+				 			Giving
+***************************************/
+
+.tithe-section {
+	padding: 1rem 0;
+}
+
+/**************************************
+				 Latest Sermons
+***************************************/
+
+section.latest-sermons {
+	background: #DB9E36;
+	background: #FFD34E;
+}
+ 
+h1.sermon-title {
+	font-size: 1.6rem;
+	margin-bottom: 0;
+}
+
+button {
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.sermon {
+	border-bottom: 1px dotted #333;
+	margin: 1.5rem 0;
+	padding-bottom: 4rem;
+}
+
+.sermons:last-child {
+	border-bottom: none;
+}
+
+.sermon-info {
+	padding-bottom: 1rem;
+}
+
+.sermon-desc p {
+	font-style: italic;
+}
+
+.sermon-author,
+.sermon-date {
+	font-size: 0.8rem;
+	display: inline;
+	font-style: italic;
+	color: #777;
+}
+
+.sermon-scriptures {
+	font-size: 0.8rem;
+	color: #777;
+	padding: 0.5rem 0;
+	font-style: italic;
+}
+
+.sermon-player {
+	position: relative;
+	max-width: 100%;
+}
+
+.mejs-offscreen {
+	display: none;
+}
+
+.mejs-container {
+	margin-top: 1rem;
+	width: 100%;
+}
+
+/* Start: Play/pause */
+.mejs-controls .mejs-play .fa-pause {
+    display: none;
+}
+
+.mejs-controls .mejs-pause .fa-play {
+    display: none;
+}
+
+.mejs-controls .mejs-playpause {
+	float: left;
+}
+
+.mejs-container .mejs-controls div {
+	float: left;
+}
+
+/* End: Play/pause */
+
+
+/* FontAwesome Buttons */
+.mejs-container .mejs-controls i {
+    display: block;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+span.mejs-time-loaded:focus,
+.mejs-container:focus { 
+	outline: none; 
+}
+
+.me-plugin {
+	position: absolute;
+}
+
+.mejs-fullscreen {
+	/* set it to not show scroll bars so 100% will work */
+	overflow: hidden !important;
+}
+
+.mejs-container-fullscreen {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 1000;
+}
+.mejs-container-fullscreen .mejs-mediaelement,
+.mejs-container-fullscreen video {
+	width: 100%;
+	height: 100%;
+}
+
+.mejs-clear {
+	clear: both;
+}
+
+/* Start: LAYERS */
+.mejs-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.mejs-mediaelement {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.mejs-poster {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: contain ;
+	background-position: 50% 50% ;
+	background-repeat: no-repeat ;
+}
+
+.mejs-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.mejs-overlay-play {
+	cursor: pointer;
+}
+
+
+.mejs-overlay-loading span {
+	display: block;
+	width: 80px;
+	height: 80px;
+	background: transparent url(loading.gif) 50% 50% no-repeat;
+}
+
+/* End: LAYERS */
+
+/* Start: CONTROL BAR */
+.mejs-container .mejs-controls {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	
+	width: 100%;
+}
+.mejs-container .mejs-controls  div {
+	list-style-type: none;
+	background-image: none;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0.5rem;
+	width: 3rem;
+	height: auto;
+	font-size: 11px;
+	line-height: 11px;
+	border: 0;
+}
+
+.mejs-controls .mejs-button button {
+	cursor: pointer;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	text-decoration: none;
+	margin: 0.5rem 0;
+	padding: 0;
+	position: absolute;
+	border: 0;
+	overflow: visible;
+}
+
+	/* :focus for accessibility */
+.mejs-controls .mejs-button button:focus {
+	outline: none;
+}
+
+/* End: CONTROL BAR */
+
+/* Start: Time (Current / Duration) */
+.mejs-container .mejs-controls .mejs-time {
+	color: #777;
+	display: block;
+	width: auto;
+	margin-top: 0.5rem;
+	padding: 1rem 0.5rem 0 0.5rem;
+	overflow: hidden;
+	font-size: 0.8rem;
+	text-align: center;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.mejs-container .mejs-controls .mejs-time a {
+	color: #fff;
+	line-height: 12px;
+	display: block;
+	float: left;
+	margin: 1px 2px 0 0;
+	width: auto;
+}
+/* End: Time (Current / Duration) */
+
+/* Start: Play/Pause/Stop */
+.mejs-controls .mejs-play button {
+	background-position: 0 0;
+}
+
+.mejs-controls .mejs-pause button {
+	background-position: 0 -16px;
+}
+
+.mejs-controls .mejs-stop button {
+	background-position: -112px 0;
+}
+/* Start: Play/Pause/Stop */
+
+/* Start: Progress Bar */
+.mejs-controls div.mejs-time-rail {
+	direction: ltr;
+	width: 200px;
+	padding-top: 5px;
+}
+
+.mejs-controls .mejs-time-rail span, .mejs-controls .mejs-time-rail a {
+	display: block;
+	position: absolute;
+	height: 2rem;
+	cursor: pointer;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-total {
+	margin: 5px;
+	margin-left: 1rem;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-buffering {
+	width: 100%;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+	background: #DB9E36;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #333;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-handle {
+	display: none;
+	position: absolute;
+	margin: 0;
+	width: 10px;
+	background: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: solid 2px #333;
+	top: -2px;
+	text-align: center;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-float {
+	position: absolute;
+	display: none;
+	width: 36px;
+	height: 17px;
+	top: -26px;
+	margin-left: -18px;
+	text-align: center;
+	color: #111;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-float-current {
+	margin: 2px;
+	width: 30px;
+	display: block;
+	text-align: center;
+	left: 0;
+}
+
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float {
+	width: 48px;
+}
+
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current {
+	width: 44px;
+}
+
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+	left: 18px;
+}
+
+/*
+.mejs-controls .mejs-time-rail:hover .mejs-time-handle {
+	visibility:visible;
+}
+*/
+/* End: Progress Bar */
+
+/**************************************
+				 Blog Section
+***************************************/
+
+section.blog h1 {
+	text-align: left;
+	font-size: 1.6rem;
+	padding-bottom: 0.5rem;
+	margin: 0;
+}
+
+section.blog p,
+section.blog span {
+	font-size: 0.8rem;
+	display: inline;
+}
+
+.blog-entry {
+	margin: 2rem 0;
+	padding-bottom: 2rem;
+	border-bottom: 1px dotted #333;
+}
+
+.blog-author-img {
+	width: 2rem;
+	border-radius: 100%;
+	border: 2px solid #333;
+	margin-right: 0.5rem;
+}
+
+.blog-excerpt {
+	margin: 1rem 0;
+}
+
+.blog-img {
+	display: none;
+}
+
+/**************************************
+				 Support Our Church
+***************************************/
+
+section.support-our-church {
+	color: #fff;
+	background: #333;
+}
+
+address.give-page {
+	padding: 1rem 0;
+}
+
+address.give-page span,
+address.contact-page span {
+	display: block;
+}
+
+/**************************************
+				 				History
+***************************************/
+
+section.history p {
+	padding: 1rem 0;
+}
+
+/**************************************
+				 				Contact
+***************************************/
+
+.contact h3 {
+	text-align: left;
+}
+
+
+/**************************************
+				      	Footer
+***************************************/
+
+footer {
+	text-align: center;
+}
+
+footer p {
+	font-size: 1rem;
+	margin: 0 auto;
+	width: 15rem;
+	font-weight: bold;
+}
+
+/**************************************
+				     Media Queries
+***************************************/
+
+@media (min-width: 650px) {
+
+	.pastor-img {
+		float: left;
+		width: 48%;
+		display: block;
+		margin-right: 1%;
+	}
+
+	ul.churches-served {
+		float: left;
+		width: 48%;
+		background: linear-gradient(#d7daab, #F2EBC7 96%);
+		padding: 1rem;
+		margin-left: 1%;
+	}
+
+}
+
+@media (min-width: 600px) {
+
+	.hero-img h1 {
+		padding-top: 9rem;
+	}
+
+	.event-date{
+	  width: 15%;
+	}
+
+	.event-details {
+		margin-left: 10%;
+		float: left;
+	}
+
+	div.give-img {
+		display: block;
+		margin: 0 auto;
+		width: 30rem;
+	}
+
+}
+
+@media (min-width: 600px) {
+
+	.hero-img h1 {
+		padding-top: 9rem;
+	}
+
+	.event-date{
+	  width: 15%;
+	}
+
+	.event-details {
+		margin-left: 10%;
+		float: left;
+	}
+
+	div.give-img {
+		display: block;
+		margin: 0 auto;
+		width: 30rem;
+	}
+
+}
+
+@media (min-width: 740px) {
+
+	section.times-location {
+		padding-top: 4rem;
+	}
+
+	.service-container {
+		padding: 0 1.8rem;
+	}
+
+	#prayer-request {
+		width: 60%;
+	}
+
+	h2 {
+		font-size: 2.2rem;
+	}
+
+	section.hero-img {
+		height: 50rem;
+	}
+
+	.hero-img h1 {
+		padding-top: 14rem;
+	}
+
+	header {
+		height: 100px;
+		line-height: 100px;
+		padding: 0 1rem;
+	}
+
+	a#logo {
+		font-size: 3rem;
+	}
+
+	.header {
+		display: inline-block;
+	}
+
+	nav {
+		display: block;
+		padding: 0;
+		float: right;
+		background: transparent;
+	}
+
+	ul.nav li {
+		display: inline-block;
+	}
+
+	ul.nav li a {
+		font-size: 1.2rem;
+		padding: 0 0.5rem;
+	}
+
+	.dropdown-content {
+		position: absolute;
+	}
+
+	ul.dropdown-content li {
+		display: block;
+		line-height: 3;
+	}
+
+	ul.dropdown-content {
+		margin-left: 0rem;
+		background: #000;
+		padding: 0 0.5rem;
+	}
+
+	#menu-btn {
+		display: none;
+	}
+
+	.service-times {
+		float: left;
+		width: 49%;
+		background:linear-gradient(#d7daab, #F2EBC7 95%);
+		z-index: 9999;
+	}
+
+	#map {
+		height: 402px;
+		float: right;
+		width: 49%;
+		border: 1px solid #d7daab;
+	}
+
+	section.blog h1 {
+		font-size: 1.8rem;
+	}
+
+	form {
+		display: block;
+		margin: 2rem auto;
+	}
+
+	.mejs-container .mejs-controls i {
+		font-size: 3rem;
+	}
+
+	.mejs-controls .mejs-time-rail span {
+		height: 3.5rem;
+	}
+
+	.mejs-container .mejs-controls div {
+		line-height: 1.5rem;
+	}
+}
+
+
+@media (min-width: 768px) {
+
+.events-hero-img h1,
+.blog-hero-img h1,
+.sermon-hero-img h1,
+.hero-img h1,
+.contact-hero-img h1,
+.give-hero-img h1,
+.history-hero-img h1,
+.pastor-hero-img h1 {
+	font-size: 4.5rem;
+	padding-top: 8rem;
+}
+
+.hero-img {
+	display: none;
+}
+
+.video-header {
+	display: block;
+	width: 100%;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#video-background { 
+	background: url("../img/ocean-1.jpeg") no-repeat, radial-gradient(#6de590, #e67478);
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+}
+
+.video-header .inner {
+	color: #fff;
+	position: absolute;
+	top: 30%;
+	width: 100%;
+}
+
+.inner h1 {
+	font-size: 3rem;
+	text-shadow: 2px 1px 5px black; 
+	margin: 0 auto;
+} 
+
+h1 span.welcome-to {
+	display: block;
+}
+
+	section.sermon-hero-img,
+	section.blog-hero-img,
+	section.events-hero-img,
+	section.give-hero-img,
+	section.contact-hero-img,
+	section.history-hero-img,
+	section.pastor-hero-img {
+		height: 30rem;
+	}
+
+	.address {
+		font-size: 1.4rem;
+	}
+
+	p,
+	address.give-btn span,
+	.location address span {
+		font-size: 1.4rem;
+	}
+
+	h1.event-title, 
+	h1.sermon-title {
+		font-size: 1.6rem;
+	}
+
+	#map {
+		height: 364px;
+	}
+
+	.blog-img {
+		display: block;
+		float: left;
+		width: 35%;
+	}
+
+	.blog-details {
+		float: right;
+		width: 60%;
+		margin-left: 5%;
+	}
+
+}
+
+@media (min-width: 1024px) {
+
+	.inner h1 {
+		font-size: 3.5rem;
+	} 
+
+	section.intro-text, 
+	section.times-location, 
+	section.upcoming-events, 
+	section.prayer-requests, 
+	section.latest-sermons, 
+	section.blog, 
+	section.support-our-church, 
+	section.give, 
+	section.sermons, 
+	section.contact, 
+	footer {
+		padding-top: 4rem;
+	}
+
+}
+
+@media (min-width: 1300px) {
+
+	.inner h1 {
+		font-size: 4rem;
+	} 
+
+	.events-hero-img h1,
+	.blog-hero-img h1,
+	.sermon-hero-img h1,
+	.hero-img h1,
+	.contact-hero-img h1,
+	.give-hero-img h1,
+	.history-hero-img h1,
+	.pastor-hero-img h1 {
+		font-size: 4rem;
+		padding-top: 8rem;
+	}
+
+}
+
+@media (min-width: 1510px) {
+
+	.video-header .inner{
+		top: 20%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+
+    <section class="contact-hero-img">
+      <div class="container">
+        <h1>Contact</h1>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container group">
+        <h2>Contact Us</h2>
+        <section class="contact-methods">
+          <h3>Call us:</h3>
+          <a>(410) 757-2995</a>
+          <h3>Email us:</h3>
+          <a href="mailto:info@umbc.church">info@abumc.church</a>
+          <h3>Write to us and visit us at:</h3>
+          <a href="https://www.google.com/maps/dir//Asbury+Broadneck+United+Methodist,+Annapolis,+MD+21409/@39.0285058,-76.4870098,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x89b802a964fb69cf:0x55bd37656c10f733!2m2!1d-76.4519046!2d39.0284444">
+            <address class="contact-page">
+              <span>Asbury Broadneck United Methodist Church</span>
+              <span>657 Broadneck Road,</span>
+              <span>Annapolis MD, 21409</span>
+            </address>
+          </a>
+        </section>
+        <form id="contact-form">
+        <h3>Send us a message:</h3>
+          <input type="text" id="name" placeholder="Name" />
+          <input type="text" id="email" placeholder="Emaill" />
+          <textarea col="50" rows="10" placeholder="Message"></textarea>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </section>
+    
+    <section class="support-our-church">
+      <div class="container">
+        <h2>Support Our Church</h2>
+        <div class="give-img">
+          <%= link_to image_tag("give-btn.svg"), pages_give_path %></a>
+        </div>
+        <div class="learn-more-btn btn">
+          <%= link_to 'Learn More', pages_give_path %>
+        </div>
+      </div>
+    </section>
+
+
+
