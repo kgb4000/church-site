@@ -12,10 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require jquery.turbolinks
 //= require mediaelement_rails
-//= require main
-//= require plugins
+//= require mediaelement-and-player.min
 //= require modernizr-2.8.3.min
+//= require main
+//= require pickadate/picker 
+//= require pickadate/picker.date 
+//= require pickadate/picker.time 
+//= require jquery.turbolinks
+//= require plugins
 //= require_tree .
+
+

@@ -27,7 +27,23 @@ $(document).ready(function() {
 		$('.share-btns').toggle('fast').css('display: inline');
 	});
 
+	$("#datepicker").pickadate({
+		format: 'dd mmm', 
+		min: new Date()
+	});
+	$("#timepicker").pickatime();
+
+  $('.audio-player').mediaelementplayer({
+      alwaysShowControls: true,
+      features: ['playpause','progress','current','duration','loadeddata','loadedmetadata','fontawesome'],
+      iPadUseNativeControls: false,
+      iPhoneUseNativeControls: false,
+      AndroidUseNativeControls: false
+  });
+
 });
+
+
 
 //AIzaSyDLdCBtXz_BjUcDASbdl_7Iox7aalBsZrs
 

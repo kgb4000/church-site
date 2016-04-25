@@ -42,6 +42,10 @@ body {
 	max-width: 1200px;
 }
 
+.push-down {
+	margin-top: 3rem;
+}
+
 /* 
 
 H1  24pt    2em     32px        32px        32px    32px       
@@ -450,7 +454,7 @@ h1.sermon-title  {
 
 .event-details {
 	float: right;
-	width: 60%;
+	width: 55%;
 	margin-left: 10%;
 }
 
@@ -458,10 +462,11 @@ h1.sermon-title  {
 	margin-top: 0.3rem;
 	text-align: center;
 	float: left;
-	width: 30%;
+	width: 7rem;
 	font-weight: 900;
 	background: #DB9E36;
-	padding: 0.8rem 0;
+	padding: 0.8rem 0.2rem;
+	font-size: 3rem;
 }
 
 .event-month {
@@ -477,10 +482,19 @@ h1.sermon-title  {
 	font-weight: 900;
 }
 
+address {
+	padding: 0.5rem 0;
+}
+
 .address {
 	font-size: 1.2rem;
 	padding: 0.5rem 0;
 	font-weight: bold;
+}
+
+.event-time {
+	font-size: 1rem;
+	padding: 0.5rem 0;
 }
 
 .read-more,
@@ -497,6 +511,16 @@ h1.sermon-title  {
 	padding: 0.2rem 0.8rem;
 	color: #82C4B1;
 	background: #333;
+}
+
+.show-edit-delete-btns {
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	padding: 0.2rem 0rem;
+}
+
+.content p {
+	padding: 0.5rem 0;
 }
 
 .read-more:hover {
@@ -1021,9 +1045,6 @@ footer p {
 		padding-top: 9rem;
 	}
 
-	.event-date{
-	  width: 15%;
-	}
 
 	.event-details {
 		margin-left: 10%;
@@ -1044,13 +1065,14 @@ footer p {
 		padding-top: 9rem;
 	}
 
-	.event-date{
-	  width: 15%;
-	}
 
 	.event-details {
 		margin-left: 10%;
 		float: left;
+	}
+
+	.event-info {
+		display: block;
 	}
 
 	div.give-img {

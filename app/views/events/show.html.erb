@@ -1,29 +1,37 @@
-<p id="notice"><%= notice %></p>
+<section class="events-hero-img">
+  <div class="container">
+    <h1><%= @event.name %></h1>
+  </div>
+</section>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+  <section class="content">
+    <h1><%= @event.name %></h1>
 
-<p>
-  <strong>Address:</strong>
-  <%= @event.address %>
-</p>
+    <p>
+      <strong>Date: </strong>
+      <%= @event.date %>
+    </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @event.image %>
-</p>
+    <p>
+      <strong>Time: </strong>
+      <%= @event.time %>
+    </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+    <p>
+      <strong>Address: </strong>
+      <%= @event.address %>
+    </p>
+
+    <p>
+      <strong>Description: </strong>
+      <%= @event.description %>
+    </p>
+
+    <%= link_to 'Edit', edit_event_path(@event) %> |
+    <%= link_to 'Back', events_path %>
+  </section>
+</div>
