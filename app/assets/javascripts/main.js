@@ -33,6 +33,12 @@ $(document).ready(function() {
 	});
 	$("#timepicker").pickatime();
 
+		$("#datepicker-1").pickadate({
+		format: 'mmmm d, yyyy', 
+		min: new Date()
+	});
+	$("#timepicker").pickatime();
+
   $('.audio-player').mediaelementplayer({
       alwaysShowControls: true,
       features: ['playpause','progress','current','duration','loadeddata','loadedmetadata','fontawesome'],

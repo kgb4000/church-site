@@ -83,6 +83,7 @@ address.give-page span,
 	font-size: 1.2rem;
 }
 
+.blogpost-hero-img h1,
 .events-hero-img h1,
 .blog-hero-img h1,
 .sermon-hero-img h1,
@@ -97,6 +98,10 @@ address.give-page span,
 	padding-top: 6rem;
 	text-align: center;
 	text-shadow: 2px 1px 5px black; 
+}
+
+.blogpost-hero-img h1 {
+	padding-top: 4rem;
 }
 
 .firstcharacter { 
@@ -275,6 +280,7 @@ section.sermon-hero-img {
 	background-position: center bottom;
 }
 
+section.blogpost-hero-img,
 section.blog-hero-img {
 	background: url("blog-pages-img.jpeg") no-repeat;
 }
@@ -305,6 +311,8 @@ section.history-hero-img {
 	background-position: center bottom;
 }
 
+section.blogpost-hero-img,
+section.blog-hero-img,
 section.pastor-hero-img,
 section.history-hero-img,
 section.sermon-hero-img,
@@ -321,6 +329,11 @@ section.history-hero-img {
 	width: auto;
 }
 
+section.blogpost-hero-img {
+	height: auto;
+	width: auto;
+	padding: 2rem;
+}
 
 
 /**************************************
@@ -462,7 +475,7 @@ h1.sermon-title  {
 	margin-top: 0.3rem;
 	text-align: center;
 	float: left;
-	width: 7rem;
+	width: 30%;
 	font-weight: 900;
 	background: #DB9E36;
 	padding: 0.8rem 0.2rem;
@@ -541,9 +554,9 @@ i.fa.fa-long-arrow-right {
 ***************************************/
 
 section.prayer-requests {
-	background: #F2EBC7 url("../img/mountain-1.jpeg");
-	background-blend-mode: color-burn;
-	background-position: bottom center;
+	background: url("mountain-1.jpeg")no-repeat, radial-gradient(#6de590, #e67478);
+	background-blend-mode: multiply;
+	background-position: center bottom;
 }
 
 form {
@@ -966,6 +979,18 @@ section.blog span {
 	display: none;
 }
 
+.blog-header {
+	padding-bottom: 2rem;
+}
+
+.blog-content .blog-post {
+	padding-top: 2rem;
+}
+
+.blog-show-img {
+	display: none;
+}
+
 /**************************************
 				 Support Our Church
 ***************************************/
@@ -973,6 +998,7 @@ section.blog span {
 section.support-our-church {
 	color: #fff;
 	background: #333;
+	margin-top: 2rem;
 }
 
 address.give-page {
@@ -1205,8 +1231,13 @@ footer p {
 .give-hero-img h1,
 .history-hero-img h1,
 .pastor-hero-img h1 {
-	font-size: 4.5rem;
+	font-size: 4rem;
 	padding-top: 8rem;
+}
+
+.blogpost-hero-img h1 {
+	font-size: 4rem;
+	padding-top: 5rem;
 }
 
 .hero-img {
@@ -1256,7 +1287,7 @@ h1 span.welcome-to {
 	section.contact-hero-img,
 	section.history-hero-img,
 	section.pastor-hero-img {
-		height: 30rem;
+		height: 26rem;
 	}
 
 	.address {
@@ -1290,6 +1321,10 @@ h1 span.welcome-to {
 		margin-left: 5%;
 	}
 
+	.blog-post {
+		padding: 0;
+	}
+
 }
 
 @media (min-width: 1024px) {
@@ -1309,7 +1344,7 @@ h1 span.welcome-to {
 	section.sermons, 
 	section.contact, 
 	footer {
-		padding-top: 4rem;
+		padding-top: 2rem;
 	}
 
 }
@@ -1320,6 +1355,7 @@ h1 span.welcome-to {
 		font-size: 4rem;
 	} 
 
+	.blogpost-hero-img h1,
 	.events-hero-img h1,
 	.blog-hero-img h1,
 	.sermon-hero-img h1,

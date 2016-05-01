@@ -1,0 +1,19 @@
+<section class="blog-hero-img">
+  <div class="container blog-header">
+    <h1>Pastor's Blog</h1>
+  </div>
+</section>
+
+<div class="container">
+	<p id="notice"><%= notice %></p>
+	<section class="blog-content">
+	<h1 class="blog-title"><%= @blog.title %></h1>
+	<p class="blog-date"><%= @blog.date %></p>
+		<%= image_tag @blog.image.url(:medium), class:"blog-show-img" %>
+		<p class="blog-post"><%= @blog.post %></p>
+
+		<%= link_to 'Edit', edit_blog_path(@blog) %> |
+		<%= link_to 'Back', blogs_path %>
+	</section>
+</div>
+<%= render "layouts/support" %>

@@ -1,0 +1,33 @@
+<%= form_for @blog, :html => { :multipart => true }  do |f| %>
+  <% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+      <% @blog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, placeholder: "Title of the Post" %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date, placeholder: "Date of the event", id: "datepicker-1" %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, placeholder: "Add an image" %>
+  </div>
+  <div class="field">
+    <%= f.label :post %><br>
+    <%= f.text_area :post, rows:"10", placeholder: "Post content" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

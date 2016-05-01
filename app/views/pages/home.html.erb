@@ -9,10 +9,7 @@
       <div class="inner">
         <h1><span class="welcome-to">Welcome to</span> Asbury Broadneck United<span class="welcome-to"> Methodist Church</span></h1>
       </div>
-      <video autoplay loop muted id="video-background" no-repeat center bottom>
-        <source src="video/church.mp4" type="video/mp4">
-        Your browser does not support the <code>video</code> element.
-      </video>
+      <%= video_tag("church.mp4", :controls => false, :id =>"video-background", :autoplay => true, :autobuffer => true, :loop => true) %>
     </section>
 
     <section class="intro-text">
@@ -100,7 +97,7 @@
         </div>
       </section>
       <div class="see-more-btn btn">
-        <a href="events.html">See More</a>
+        <%= link_to 'See More', events_path %>
       </div>
     </section>
 
@@ -206,7 +203,7 @@
           </div>
         </section>
         <div class="read-more-btn btn">
-          <a href="blog.html">Read More</a>
+        <%= link_to 'Read More', blogs_path %>
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@
 <section class="upcoming-events page">
   <div class="container">
     <h2>Upcoming Events</h2>
-    <div class="see-more-btn btn">
+    <div class="btn">
       <%= link_to 'Add a New Event', new_event_path %>
     </div>
     <% @events.each do |event| %>
@@ -36,21 +36,10 @@
       </section>
     <% end %>
   </div>
-
   <div class="see-more-btn btn">
     <a href="#">See More</a>
   </div>
 </section>
-<section class="support-our-church">
-  <div class="container">
-    <h2>Support Our Church</h2>
-    <div class="give-img">
-      <%= link_to image_tag("give-btn.svg"), pages_give_path %></a>
-    </div>
-    <div class="learn-more-btn btn">
-      <%= link_to 'Learn More', pages_give_path %>
-    </div>
-  </div>
-</section>
+<%= render "layouts/support" %>
 
     

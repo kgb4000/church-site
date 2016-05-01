@@ -1,6 +1,6 @@
 <section class="events-hero-img">
   <div class="container">
-    <h1><%= @event.name %></h1>
+    <h1>Church Events</h1>
   </div>
 </section>
 
@@ -30,8 +30,9 @@
       <strong>Description: </strong>
       <%= @event.description %>
     </p>
-
+    
     <%= link_to 'Edit', edit_event_path(@event) %> |
     <%= link_to 'Back', events_path %>
   </section>
 </div>
+<%= render "layouts/support-church" %>

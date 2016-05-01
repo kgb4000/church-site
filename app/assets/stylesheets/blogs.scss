@@ -1,0 +1,21 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blog-header {
+	padding-bottom: 2rem;
+}
+
+.blog-header .blog-date {
+	color: #fff;
+	text-align: center;
+}
+
+.blog-post {
+	padding: 3rem 0;
+}
+
+section.blog-hero-img {
+	height: auto;
+}
+
