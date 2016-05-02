@@ -42,6 +42,12 @@ body {
 	max-width: 1200px;
 }
 
+.devise-container {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 6rem 1.8rem;
+}
+
 .push-down {
 	margin-top: 3rem;
 }
@@ -70,7 +76,7 @@ h6 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 900;
 	text-align: center;
-	margin: 1rem 0;
+	margin: 1.6rem 0;
 }
 
 h2 {
@@ -81,6 +87,10 @@ p,
 address.give-page span,
 .location address span {
 	font-size: 1.2rem;
+}
+
+.blog-content p {
+	margin: 0 0 1.6rem 0;
 }
 
 .blogpost-hero-img h1,
@@ -150,20 +160,8 @@ input[type="submit"] {
 	text-transform: uppercase;
 }
 
-section.intro-text,
-section.times-location,
-section.upcoming-events,
-section.prayer-requests,
-section.latest-sermons,
-section.blog,
-section.support-our-church,
-section.give,
-section.sermons,
-section.contact,
-section.history,
-section.pastor,
-footer {
-	padding: 2rem 0;
+section.support-our-church h2 {
+	padding-bottom: 1rem;
 }
 
 section.upcoming-events.page {
@@ -329,10 +327,22 @@ section.history-hero-img {
 	width: auto;
 }
 
-section.blogpost-hero-img {
-	height: auto;
-	width: auto;
-	padding: 2rem;
+
+
+section.intro-text,
+section.upcoming-events,
+section.times-location,
+section.prayer-requests,
+section.latest-sermons,
+section.support-our-church,
+section.give,
+section.blog,
+section.sermons,
+section.contact,
+section.history,
+section.pastor,
+footer {
+	padding: 1rem 0;
 }
 
 
@@ -393,6 +403,11 @@ section.times-location .times {
 	text-align: center;
 }
 
+.btn-link {
+	margin: 1rem 0;
+	text-align: center;
+}
+
 
 .give-now-btn a,
 .learn-more-btn a,
@@ -423,6 +438,10 @@ section.times-location .times {
 	border: 3px solid #FFD34E;
 }
 
+.edit-delete-btns {
+	text-align: center;
+}
+
 /**************************************
 				   Map
 ***************************************/
@@ -450,7 +469,7 @@ section.upcoming-events {
 
 .event {
 	margin: 1.5rem 0;
-	padding: 2rem 0 3rem 0;
+	padding: 0rem 0 3rem 0;
 	border-bottom: 1px dotted #333;
 }
 
@@ -466,7 +485,7 @@ h1.sermon-title  {
 }
 
 .event-details {
-	float: right;
+	float: left;
 	width: 55%;
 	margin-left: 10%;
 }
@@ -571,6 +590,10 @@ form {
 /**************************************
 				 			Pastor
 ***************************************/
+
+.pastor h2 {
+	padding: 1rem 0;
+}
 
 .pastor-img {
 	width: 100%;
@@ -959,9 +982,10 @@ section.blog span {
 }
 
 .blog-entry {
-	margin: 2rem 0;
+	margin: 0;
 	padding-bottom: 2rem;
 	border-bottom: 1px dotted #333;
+	padding: 2rem 0;
 }
 
 .blog-author-img {
@@ -983,13 +1007,28 @@ section.blog span {
 	padding-bottom: 2rem;
 }
 
-.blog-content .blog-post {
-	padding-top: 2rem;
-}
-
 .blog-show-img {
 	display: none;
 }
+
+p.blog-date {
+	text-align: center;
+	margin: 0;
+}
+
+.social-links {
+	text-align: center;
+}
+
+.social-links p {
+	font-weight: bold;
+}
+
+.social-links i {
+	font-size: 2rem;
+	display: inline-block;
+	margin: 0 0.5rem;
+} 
 
 /**************************************
 				 Support Our Church
@@ -1031,8 +1070,13 @@ section.history p {
 				      	Footer
 ***************************************/
 
+section.support-our-church {
+	padding: 2rem 0;
+}
+
 footer {
 	text-align: center;
+	padding: 2rem;
 }
 
 footer p {
@@ -1045,45 +1089,6 @@ footer p {
 /**************************************
 				     Media Queries
 ***************************************/
-
-@media (min-width: 650px) {
-
-	.pastor-img {
-		float: left;
-		width: 48%;
-		display: block;
-		margin-right: 1%;
-	}
-
-	ul.churches-served {
-		float: left;
-		width: 48%;
-		background: linear-gradient(#d7daab, #F2EBC7 96%);
-		padding: 1rem;
-		margin-left: 1%;
-	}
-
-}
-
-@media (min-width: 600px) {
-
-	.hero-img h1 {
-		padding-top: 9rem;
-	}
-
-
-	.event-details {
-		margin-left: 10%;
-		float: left;
-	}
-
-	div.give-img {
-		display: block;
-		margin: 0 auto;
-		width: 30rem;
-	}
-
-}
 
 @media (min-width: 600px) {
 
@@ -1109,7 +1114,42 @@ footer p {
 
 }
 
+@media (min-width: 650px) {
+
+	.pastor-img {
+		float: left;
+		width: 48%;
+		display: block;
+		margin-right: 1%;
+	}
+
+	ul.churches-served {
+		float: left;
+		width: 48%;
+		background: linear-gradient(#d7daab, #F2EBC7 96%);
+		padding: 1rem;
+		margin-left: 1%;
+	}
+
+}
+
 @media (min-width: 740px) {
+
+	section.intro-text,
+	section.upcoming-events,
+	section.times-location,
+	section.prayer-requests,
+	section.latest-sermons,
+	section.support-our-church,
+	section.give,
+	section.blog,
+	section.sermons,
+	section.contact,
+	section.history,
+	section.pastor,
+	footer {
+		padding: 2rem 0;
+	}
 
 	section.times-location {
 		padding-top: 4rem;
@@ -1184,6 +1224,10 @@ footer p {
 		display: none;
 	}
 
+	.sessions {
+		display: none;
+	}
+
 	.service-times {
 		float: left;
 		width: 49%;
@@ -1233,11 +1277,6 @@ footer p {
 .pastor-hero-img h1 {
 	font-size: 4rem;
 	padding-top: 8rem;
-}
-
-.blogpost-hero-img h1 {
-	font-size: 4rem;
-	padding-top: 5rem;
 }
 
 .hero-img {
@@ -1313,6 +1352,10 @@ h1 span.welcome-to {
 		display: block;
 		float: left;
 		width: 35%;
+	}
+
+	.blog-entry {
+		margin: 2rem 0;
 	}
 
 	.blog-details {

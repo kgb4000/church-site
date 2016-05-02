@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   resources :blogs
+
   resources :events
+  
   root 'pages#home'
 
   get 'pages/home'

@@ -20,7 +20,12 @@ gem 'stripe', '~> 1.15.0'
 gem 'pickadate-rails'
 gem 'jquery-turbolinks'
 
+gem 'devise'
+
 gem "mediaelement_rails"
+
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'pygments.rb', '~> 0.6.3'
 
 group :development, :test do
 	gem 'sqlite3'

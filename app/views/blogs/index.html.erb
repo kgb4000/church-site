@@ -9,7 +9,7 @@
 
   <section class="blog">
     <h2>Latest Posts</h2>
-    <div class="btn">
+    <div class="btn-link">
       <%= link_to 'Write New Blog', new_blog_path %>
     </div>
     
@@ -18,9 +18,9 @@
           <%= image_tag blog.image.url(:medium), class:"blog-img" %>
           <div class="blog-details">
             <h1 class="blog-title"><%= blog.title %></h1>
-            <img class="blog-author-img" src="img/tillet.jpg" />
-            <p class="author">Rev. Tillett</p> |
-            <span class="blog-date"><%= blog.date %></span>
+            <%= image_tag blog.user.avatar, class: "blog-author-img" %>
+            <p class="author"><%= current_user.user_name %></p> |
+            <span class="blog-date"><%= blog.created_at.strftime("%d %b. %Y") %></span>
             <div class="blog-excerpt"><%= truncate(blog.post, length: 220) %></div>
             <div class="read-more">
               <%= link_to 'Read More', blog %>
