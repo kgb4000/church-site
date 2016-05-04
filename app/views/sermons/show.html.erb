@@ -1,0 +1,29 @@
+<section class="sermon-hero-img">
+  <div class="container">
+    <h1>Sermons</h1>
+  </div>
+</section>
+<div class="container">
+	<p>
+	  <strong>Title:</strong>
+	  <%= @sermon.title %>
+	</p>
+
+	<p>
+	  <strong>Scripture:</strong>
+	  <%= @sermon.scripture %>
+	</p>
+
+	<p>
+	  <strong>Description:</strong>
+	  <%= @sermon.description %>
+	</p>
+
+	<p>
+	  <strong>Sermon:</strong>
+	  <%= audio_tag @sermon.audio %>
+	</p>
+
+	<%= link_to 'Edit', edit_sermon_path(@sermon) %> |
+	<%= link_to 'Back', sermons_path %>
+</div>

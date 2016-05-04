@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def home
+    @users = User.all
+    @blogs = Blog.order("created_at DESC").limit(3)
   end
 
   def contact

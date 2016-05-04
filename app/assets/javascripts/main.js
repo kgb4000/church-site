@@ -20,6 +20,12 @@ $(document).ready(function() {
 		$("header").addClass("active");
 	});
 
+	$('a.dropdown-menu-account').click(function(e) {
+		e.preventDefault();
+		$('ul.dropdown-content-account').toggle('fast');
+		$("header").addClass("active");
+	});
+
 	var thisButton = $('.fa-share-alt');
 
 	$(thisButton).click(function(e) {
@@ -46,6 +52,10 @@ $(document).ready(function() {
       iPhoneUseNativeControls: false,
       AndroidUseNativeControls: false
   });
+
+ $('#flash').delay(500).fadeIn('normal', function() {
+    $(this).delay(2500).fadeOut();
+ });
 
 });
 

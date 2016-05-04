@@ -17,19 +17,18 @@
               <li><a href="https://www.google.com/maps/dir//Asbury+Broadneck+United+Methodist,+Annapolis,+MD+21409/@39.0285058,-76.4870098,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x89b802a964fb69cf:0x55bd37656c10f733!2m2!1d-76.4519046!2d39.0284444">Directions</a></li>
             </ul>
           </li>
-          <li><a href="sermons.html">Sermons</a></li>
+          <li><%= link_to 'Sermons', sermons_path %></li>
           <li><%= link_to 'Events', events_path %></li>
           <li><%= link_to 'Blog', blogs_path %></li>
           <li><%= link_to 'Give', pages_give_path %></li>
           <li><a href="contact.html">Contact</a></li>
           <% if user_signed_in? %>
+            <li><%= image_tag(current_user.avatar.url(:thumb), class: "current-user-img") %></li>
             <li><%= link_to " Log out", destroy_user_session_path, method: :delete %></li>
             <li><%= link_to "Edit",  edit_user_registration_path %></li>
           <% else %>
             <li><%= link_to 'Sign in', new_user_session_path %></li>
           <% end %>
-          
-          
         </ul>
       </nav>
     </header>

@@ -9,7 +9,7 @@
       <div class="inner">
         <h1><span class="welcome-to">Welcome to</span> Asbury Broadneck United<span class="welcome-to"> Methodist Church</span></h1>
       </div>
-      <%= video_tag("church.mp4", :controls => false, :id =>"video-background", :autoplay => true, :autobuffer => true, :loop => true) %>
+      <%= video_tag("https://s3.amazonaws.com/asburychurch/church.mp4", :controls => false, :id =>"video-background", :autoplay => true, :autobuffer => true, :loop => true) %>
     </section>
 
     <section class="intro-text">
@@ -163,45 +163,28 @@
     <section class="blog">
       <div class="container">
         <h2>The Pastor's Blog</h2>
-        <section class="blog-entry group">
-          <img class="blog-img" src="img/sermons-bible-img.jpeg" />
-          <div class="blog-details">
-            <h1 class="blog-title truncate">The Way We Live</h1>
-            <img class="blog-author-img" src="img/tillet.jpg" />
-            <p class="author">Rev. Tillett</p> |
-            <span class="blog-date">Mar, 27 2016</span>
-            <div class="blog-excerpt">Suspendisse tincidunt laoreet vestibulum? Quisque posuere ut quam nec egestas? Morbi facilisis ex ac magna aliquet, ac feugiat nibh faucibus.</div>
-            <a href="#" class="read-more">Read more
-              <i class="fa fa-long-arrow-right"></i>
-            </a>
-          </div>
-        </section>
-        <section class="blog-entry group">
-          <img class="blog-img" src="img/sermons.jpeg" />
-          <div class="blog-details">
-            <h1 class="blog-title truncate">Try To Be Like Jesus</h1>
-            <img class="blog-author-img" src="img/me.jpg" />
-            <p class="author">Kester Browne</p> |
-            <span class="blog-date"><em>Apr, 26 2016</em></span>
-            <div class="blog-excerpt">Suspendisse tincidunt laoreet vestibulum? Quisque posuere ut quam nec egestas? Morbi facilisis ex ac magna aliquet, ac feugiat nibh faucibus.</div>
-            <a href="#" class="read-more">Read more
-              <i class="fa fa-long-arrow-right"></i>
-            </a>
-          </div>
-        </section>
-        <section class="blog-entry group">
-          <img class="blog-img" src="img/food-2.jpg" />
-          <div class="blog-details">
-            <h1 class="blog-title truncate">Be ready For When The Lord Comes</h1>
-            <img class="blog-author-img" src="img/tillet.jpg" />
-            <p class="author">Rev. Tillett</p> |
-            <span class="blog-date"><em>Apr, 5 2016</em></span>
-            <div class="blog-excerpt">Suspendisse tincidunt laoreet vestibulum? Quisque posuere ut quam nec egestas? Morbi facilisis ex ac magna aliquet, ac feugiat nibh faucibus.</div>
-            <a href="#" class="read-more">Read more
-              <i class="fa fa-long-arrow-right"></i>
-            </a>
-          </div>
-        </section>
+        <% @blogs.each do |blog| %>
+          <section class="blog-entry group">
+            <%= image_tag blog.image.url(:large), class:"blog-img" %>
+              <div class="blog-details">
+                <h1 class="blog-title"><%= blog.title %></h1>
+                <%= image_tag(blog.user.avatar, class: "blog-author-img") %>
+                <p class="author"><%= blog.user.user_name %></p> |
+                <span class="blog-date"><%= blog.created_at.strftime("%d %b. %Y") %></span>
+                <div class="blog-excerpt"><%= truncate(blog.post, length: 220) %></div>
+                <div class="read-more">
+                <%= link_to 'Read More', blog %>
+                <i class="fa fa-long-arrow-right"></i>
+              </div>
+              <% if blog.user == current_user %>
+                <div class="show-edit-delete-btns">
+                  <%= link_to 'Edit', edit_blog_path(blog) %> |
+                  <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              <% end %>
+            </div>
+          </section>
+        <% end %>
         <div class="read-more-btn btn">
         <%= link_to 'Read More', blogs_path %>
         </div>

@@ -31,7 +31,7 @@ body {
 .service-times-container,
 .container {
 	margin: 0 auto;
-	padding: 0 1.8rem;
+	padding: 0 1.2rem;
 }
 
 .container {
@@ -48,8 +48,15 @@ body {
 	padding: 6rem 1.8rem;
 }
 
-.push-down {
-	margin-top: 3rem;
+#flash { 
+	display:none; 
+	background-color:#000; 
+}
+
+p.notice,
+p.alert {
+	color: #fff;
+	text-align: center;
 }
 
 /* 
@@ -682,6 +689,7 @@ button {
 .sermon-player {
 	position: relative;
 	max-width: 100%;
+	margin-bottom: 2rem;
 }
 
 .mejs-offscreen {
@@ -988,6 +996,7 @@ section.blog span {
 	padding: 2rem 0;
 }
 
+.current-user-img,
 .blog-author-img {
 	width: 2rem;
 	border-radius: 100%;
@@ -1028,6 +1037,7 @@ p.blog-date {
 	font-size: 2rem;
 	display: inline-block;
 	margin: 0 0.5rem;
+	cursor: pointer;
 } 
 
 /**************************************
@@ -1091,6 +1101,12 @@ footer p {
 ***************************************/
 
 @media (min-width: 600px) {
+
+	.service-times-container,
+	.container {
+		margin: 0 auto;
+		padding: 0 1.2rem;
+	}
 
 	.hero-img h1 {
 		padding-top: 9rem;

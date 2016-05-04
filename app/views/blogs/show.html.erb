@@ -5,19 +5,20 @@
 </section>
 
 <div class="container">
-	<p id="notice"><%= notice %></p>
 	<section class="blog-content">
 		<h1 class="blog-title"><%= @blog.title %></h1>
 		<div class="date-author">
-			<%= image_tag(current_user.avatar.url(:thumb), class: "blog-author-img") %>
-			<p class="author"><%= current_user.user_name %></p> |
+			<%= image_tag(@blog.user.avatar, class: "blog-author-img") %>
+			<p class="author"><%= @blog.user.user_name %></p> |
 			<p class="blog-date"><%= @blog.created_at.strftime("%d %b. %Y") %></p>
 		</div>
 		<div class="edit-delete-btns">
-			<%= link_to 'Edit', edit_blog_path(@blog) %> |
+			<% if @blog.user == current_user %>
+				<%= link_to 'Edit', edit_blog_path(@blog) %> |
+			<% end %>
 			<%= link_to 'Back', blogs_path %>
 		</div>
-		<%= image_tag @blog.image.url(:medium), class:"blog-show-img" %>
+		<%= image_tag @blog.image.url(:large), class:"blog-show-img" %>
 		<p class="blog-post"><%= markdown @blog.post %></p>
 		<div class="social-links">
 			<p>Share this post</p>

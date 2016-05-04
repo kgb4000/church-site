@@ -1,0 +1,45 @@
+<section class="sermon-hero-img">
+  <div class="container">
+    <h1>Sermons</h1>
+  </div>
+</section>
+<div class="container">
+
+  <section class="sermons">
+    <div class="container">
+      <h2>Recent Sermons</h2>
+      <div class="btn-link">
+        <% if user_signed_in? %>
+          <%= link_to 'Add New Sermon', new_sermon_path %>
+        <% end %>
+      </div>
+      <section class="sermon">
+        <% @sermons.each do |sermon| %>
+          <div class="group">
+            <div class="sermon-info">
+              <h1 class="sermon-title"><%= sermon.title %></h1>
+              <p class="sermon-author">Rev. Tillett, </p>
+              <p class="sermon-date"><%= sermon.created_at.strftime("%b %d. %Y") %></p>
+              <p class="sermon-scriptures"><%= sermon.scripture %></p>
+            </div>
+          </div>
+          <div class="sermon-player">
+            <%= audio_tag(sermon.audio.url, class: "audio-player", style: "width:100%; height:60px;") %>
+          </div>
+          <div class="read-more">
+            <%= link_to 'More', sermon %>
+            <i class="fa fa-long-arrow-right"></i>
+          </div>
+          <div class="show-edit-delete-btns">
+            <%= link_to 'Edit', edit_sermon_path(sermon) %> |
+            <%= link_to 'Destroy', sermon, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        <% end %>
+      </section>
+      <div class="hear-more-btn btn">
+        <a href="#">Hear More</a>
+      </div>
+    </div>
+  </section>
+</div>
+<%= render "layouts/support" %>

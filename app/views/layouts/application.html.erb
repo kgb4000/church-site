@@ -23,11 +23,13 @@
 
 	  <!-- Add your site or application content here -->
 	  
-
+		<div id="flash">
+			<p class="notice"><%= notice %></p>
+	    <p class="alert"><%= alert %></p>
+		</div>
 
 	  <%= render "layouts/header" %>
-		<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
 		<%= yield %>
 
 		<%= render "layouts/footer" %>

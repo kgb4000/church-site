@@ -11,11 +11,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
-
-gem 'figaro'
-gem 'aws-sdk'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 's3', '~> 0.3.24'
 gem 'stripe', '~> 1.15.0'
+gem 'aws-sdk', '< 2.0'
+
+#gem 'aws-sdk', '~> 2.3'
+
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 gem 'pickadate-rails'
 gem 'jquery-turbolinks'

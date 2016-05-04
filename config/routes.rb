@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :sermons
+  
   devise_for :users
 
   resources :blogs
